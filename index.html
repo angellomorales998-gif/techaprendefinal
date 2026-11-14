@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechAprende: consulta cursos de desarrollo web y realiza una inscripción de demostración.">
+  <title>TechAprende | Cursos tecnológicos</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+  <header class="encabezado" id="inicio">
+    <div class="barra-navegacion contenedor">
+      <a class="marca" href="#inicio" aria-label="TechAprende, ir al inicio"><span class="marca-icono" aria-hidden="true">T</span><span>TechAprende</span></a>
+      <nav aria-label="Navegación principal"><ul class="menu"><li><a href="#inicio">Inicio</a></li><li><a href="#cursos">Cursos</a></li><li><a href="#inscripcion">Inscripción</a></li><li><a href="#inscritos">Mis registros</a></li></ul></nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="portada">
+      <div class="contenedor portada-contenido">
+        <div class="portada-texto"><p class="sobrelinea">FORMACIÓN PARA EL MUNDO DIGITAL</p><h1>Aprende tecnología.<br><span>Construye tus ideas.</span></h1><p class="portada-descripcion">Explora cursos prácticos de desarrollo web, fortalece tus habilidades y da el siguiente paso en tu aprendizaje.</p><a class="boton boton-principal" href="#cursos">Explorar cursos</a></div>
+        <div class="portada-grafico" aria-hidden="true"><div class="grafico-ventana"><div class="grafico-puntos"><i></i><i></i><i></i></div><div class="grafico-linea"></div><div class="grafico-bloques"><span>HTML</span><span>CSS</span><span>JS</span></div><div class="grafico-barra"></div><div class="grafico-barra corta"></div></div><span class="etiqueta-flotante">Aprendizaje práctico</span></div>
+      </div>
+    </section>
+    <section class="seccion contenedor" id="cursos" aria-labelledby="titulo-cursos">
+      <div class="encabezado-seccion"><div><p class="sobrelinea">NUESTRA OFERTA</p><h2 id="titulo-cursos">Cursos disponibles</h2><p class="texto-secundario">Selecciona un curso para conocer su contenido e iniciar tu inscripción.</p></div><p class="contador-cursos" id="contadorCursos" aria-live="polite">3 cursos disponibles</p></div>
+      <div class="busqueda"><label for="buscador">Buscar un curso</label><div class="busqueda-controles"><input type="search" id="buscador" placeholder="Ej. HTML, estilos, JavaScript" autocomplete="off"><button class="boton boton-secundario" type="button" id="limpiarBusqueda">Limpiar búsqueda</button></div><p class="ayuda">Puedes buscar por nombre o por tema del curso.</p></div>
+      <div class="rejilla-cursos" id="listaCursos" aria-live="polite" aria-busy="false"></div>
+    </section>
+    <section class="seccion seccion-inscripcion" id="inscripcion" aria-labelledby="titulo-inscripcion">
+      <div class="contenedor rejilla-inscripcion"><div class="inscripcion-intro"><p class="sobrelinea">DA EL SIGUIENTE PASO</p><h2 id="titulo-inscripcion">Inscríbete en tu próximo curso</h2><p>Completa tus datos y recibirás una confirmación en esta misma página.</p><div class="nota-demo"><strong>Prototipo académico</strong><span>Los registros se mantienen temporalmente en esta página. No se envían a un servidor ni se almacenan de forma permanente.</span></div></div>
+        <form class="formulario" id="formulario" novalidate>
+          <div class="campo"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="nombre" minlength="3" maxlength="70" autocomplete="name" aria-describedby="ayudaNombre" required><small id="ayudaNombre" class="ayuda">Escribe al menos 3 caracteres.</small></div>
+          <div class="campo"><label for="correo">Correo electrónico</label><input type="email" id="correo" name="correo" maxlength="120" autocomplete="email" aria-describedby="ayudaCorreo" required><small id="ayudaCorreo" class="ayuda">Usaremos este dato solo para mostrar el resumen de demostración.</small></div>
+          <div class="campo"><label for="curso">Curso de interés</label><select id="curso" name="curso" required><option value="">Selecciona un curso</option><option value="HTML y fundamentos web">HTML y fundamentos web</option><option value="Diseño de páginas con CSS">Diseño de páginas con CSS</option><option value="Programación con JavaScript">Programación con JavaScript</option></select></div>
+          <div class="acciones-formulario"><button class="boton boton-principal boton-ancho" type="submit">Registrar inscripción</button><button class="boton boton-texto boton-ancho" type="reset">Limpiar formulario</button></div>
+          <p class="mensaje" id="mensaje" role="status" aria-live="polite" aria-atomic="true"></p>
+        </form>
+      </div>
+    </section>
+    <section class="seccion contenedor" id="inscritos" aria-labelledby="titulo-inscritos"><div class="encabezado-seccion encabezado-registros"><div><p class="sobrelinea">RESUMEN LOCAL</p><h2 id="titulo-inscritos">Inscripciones de demostración</h2><p class="texto-secundario">Aquí aparecen los registros creados durante esta sesión.</p></div><span class="contador-registros" id="contadorRegistros">0 registros</span></div><div id="listaInscripciones" class="lista-inscripciones" aria-live="polite"><p class="estado-vacio">Todavía no hay inscripciones registradas.</p></div></section>
+  </main>
+  <footer class="pie-pagina"><div class="contenedor pie-contenido"><p><strong>TechAprende</strong> · Proyecto académico de desarrollo web</p><a href="#inicio">Volver al inicio ↑</a></div></footer>
+</body>
+</html>
